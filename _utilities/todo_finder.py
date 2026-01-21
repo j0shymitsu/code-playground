@@ -58,7 +58,7 @@ def main():
     root_dir = input("Enter root directory path: ").strip()
 
     try:
-        root_path = Path(root_dir).resolve()
+        root_path = Path(root_dir).expanduser().resolve()
 
         print(f"\nSearching for Python files in: {root_path}")
         python_files = find_python_files(root_path)
