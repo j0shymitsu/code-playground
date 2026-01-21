@@ -84,10 +84,10 @@ def main():
         output_file = root_path / "TODO_LIST.md"
 
         # Append if exists
-        with open(output_file, 'a', encoding='utf-8') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             f.write(markdown_content)
         
-        print(f"\nTODOs appended to: {output_file}")
+        print(f"\nTODOs added to: {output_file}")
     
     except ValueError as e:
         print(f"Error: {e}")
