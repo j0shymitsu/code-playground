@@ -21,7 +21,7 @@ def find_python_files(root_dir):
 def extract_todos(file_path):
     '''Extract TODO comments from Python file'''
     todos = []
-    todo_pattern = re.compile(r'#\s*TODO[:\s]*(.+)', re.IGNORECASE)
+    todo_pattern = re.compile(r'#\s*TODO[:\s]*(.+)')
 
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
